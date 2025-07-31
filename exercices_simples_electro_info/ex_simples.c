@@ -152,7 +152,7 @@ int main(){
 Amélioration de l'exercice 6 : compter le nombre d'essais et l'afficher à la fin : "Bravo ! Vous avez trouvé en x essais."
 */
 
-
+/*
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -170,11 +170,11 @@ int main(){
     printf("Bravo ! Vous avez trouvé en %d essais.\n",nb_try);
     return 0;
 }
-
+*/
 
 /*Exercice 8
 Demander à l’utilisateur un nombre entier positif. Afficher tous les nombres pairs entre 0 et le nombre saisi."*/
-/*
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -194,7 +194,7 @@ int main(){
 	}
 	return 0;
 }
-*/
+
 
 
 
