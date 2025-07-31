@@ -129,9 +129,10 @@ Demander à l’utilisateur combien font 2 fois 2 et répéter cette question au
 
 Ajouter le message "Faux, recommencez" à chaque fausse réponse, et "Bravo !" pour la bonne réponse.*/
 
+/*
 #include <stdio.h>
 #include <stdlib.h>
-/*
+
 int main(){
     int rep;
 
@@ -151,6 +152,7 @@ int main(){
 Amélioration de l'exercice 6 : compter le nombre d'essais et l'afficher à la fin : "Bravo ! Vous avez trouvé en x essais."
 */
 
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -169,6 +171,30 @@ int main(){
     return 0;
 }
 
+
+/*Exercice 8
+Demander à l’utilisateur un nombre entier positif. Afficher tous les nombres pairs entre 0 et le nombre saisi."*/
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+	int ent1,res_mod,i;
+	printf("Un nombre entier positif please :) UwU\n");
+	scanf("%d",&ent1);
+
+	printf("nb: %d\n",ent1);
+	i=0;
+	while(i != ent1){
+		res_mod = i%2;
+		if (res_mod == 0){
+			printf("even_nb: %d\n",i);	
+		}
+		i += 1;
+	}
+	return 0;
+}
+*/
 
 
 
