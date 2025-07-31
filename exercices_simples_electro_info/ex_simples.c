@@ -65,23 +65,61 @@ Demander à l'utilisateur 2 nombres entiers et les stocker dans des variables.
 Échanger les 2 valeurs des 2 variables et les afficher.
 */
 
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main(){
+//     int nb1,nb2,nb3;
+
+//     printf("Entrer un nombre entier (nb1):\n");
+//     scanf("%d", &nb1);
+
+
+//     printf("Entrer un nombre entier (nb2):\n");
+//     scanf("%d", &nb2);
+
+//     nb3 = nb1;
+//     nb1 = nb2;
+//     nb2 = nb3;
+
+//     printf("nb1: %d, nb2: %d\n", nb1,nb2);
+//     return 0;
+// }
+
+/*Exercice 5
+
+Demander à l'utilisateur 3 nombres entiers et les stocker dans des variables.
+Trier les 3 nombres par ordre croissant en échangeant leurs valeurs si nécessaire.
+Afficher les 3 nombres.*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
 int main(){
-    int nb1,nb2,nb3;
+    int ent1,ent2,ent3,temp_var,i;
+    printf("Entrez un premier nombre entier (nb1): ");
+    scanf("%d",&ent1);
 
-    printf("Entrer un nombre entier (nb1):\n");
-    scanf("%d", &nb1);
+    printf("Entrez un premier nombre entier (nb2): ");
+    scanf("%d",&ent2);
+
+    printf("Entrez un premier nombre entier (nb3): ");
+    scanf("%d",&ent3);
 
 
-    printf("Entrer un nombre entier (nb2):\n");
-    scanf("%d", &nb2);
+    for (i=0;i<3;i++){
+        if (ent2 > ent3){
+            temp_var = ent3;
+            ent3 = ent2;
+            ent2 = temp_var;
+        }
+        if (ent1 > ent2){
+            temp_var = ent2;
+            ent2 = ent1;
+            ent1 = temp_var;
+        }
+    }
 
-    nb3 = nb1;
-    nb1 = nb2;
-    nb2 = nb3;
-
-    printf("nb1: %d, nb2: %d\n", nb1,nb2);
+    printf("nb1: %d, nb2: %d, nb3: %d\n",ent1,ent2,ent3);
     return 0;
 }
