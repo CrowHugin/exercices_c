@@ -124,14 +124,14 @@ Afficher les 3 nombres.*/
 //     return 0;
 // }
 
-/*Exercice 5
+/*Exercice 6
 Demander à l’utilisateur combien font 2 fois 2 et répéter cette question aussi longtemps que la réponse est fausse.
 
 Ajouter le message "Faux, recommencez" à chaque fausse réponse, et "Bravo !" pour la bonne réponse.*/
 
 #include <stdio.h>
 #include <stdlib.h>
-
+/*
 int main(){
     int rep;
 
@@ -145,4 +145,32 @@ int main(){
 
 
     return 0;
+}*/
+
+/*Exercice 7
+Amélioration de l'exercice 6 : compter le nombre d'essais et l'afficher à la fin : "Bravo ! Vous avez trouvé en x essais."
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int rep,nb_try;
+
+    nb_try = 0;
+    rep = 0;
+    while (rep != 4){
+        printf("Combien font 2*2 ?\n");
+        scanf("%d",&rep);
+        printf("Faux, recommencez\n");
+	nb_try += 1;
+    }
+    printf("Bravo ! Vous avez trouvé en %d essais.\n",nb_try);
+    return 0;
 }
+
+
+
+
+
+
