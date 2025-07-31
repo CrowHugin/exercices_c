@@ -92,34 +92,57 @@ Demander à l'utilisateur 3 nombres entiers et les stocker dans des variables.
 Trier les 3 nombres par ordre croissant en échangeant leurs valeurs si nécessaire.
 Afficher les 3 nombres.*/
 
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main(){
+//     int ent1,ent2,ent3,temp_var,i;
+//     printf("Entrez un premier nombre entier (nb1): ");
+//     scanf("%d",&ent1);
+
+//     printf("Entrez un premier nombre entier (nb2): ");
+//     scanf("%d",&ent2);
+
+//     printf("Entrez un premier nombre entier (nb3): ");
+//     scanf("%d",&ent3);
+
+
+//     for (i=0;i<3;i++){
+//         if (ent2 > ent3){
+//             temp_var = ent3;
+//             ent3 = ent2;
+//             ent2 = temp_var;
+//         }
+//         if (ent1 > ent2){
+//             temp_var = ent2;
+//             ent2 = ent1;
+//             ent1 = temp_var;
+//         }
+//     }
+
+//     printf("nb1: %d, nb2: %d, nb3: %d\n",ent1,ent2,ent3);
+//     return 0;
+// }
+
+/*Exercice 5
+Demander à l’utilisateur combien font 2 fois 2 et répéter cette question aussi longtemps que la réponse est fausse.
+
+Ajouter le message "Faux, recommencez" à chaque fausse réponse, et "Bravo !" pour la bonne réponse.*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
 int main(){
-    int ent1,ent2,ent3,temp_var,i;
-    printf("Entrez un premier nombre entier (nb1): ");
-    scanf("%d",&ent1);
+    int rep;
 
-    printf("Entrez un premier nombre entier (nb2): ");
-    scanf("%d",&ent2);
-
-    printf("Entrez un premier nombre entier (nb3): ");
-    scanf("%d",&ent3);
-
-
-    for (i=0;i<3;i++){
-        if (ent2 > ent3){
-            temp_var = ent3;
-            ent3 = ent2;
-            ent2 = temp_var;
-        }
-        if (ent1 > ent2){
-            temp_var = ent2;
-            ent2 = ent1;
-            ent1 = temp_var;
-        }
+    rep = 0;
+    while (rep != 4){
+        printf("Combien font 2*2 ?\n");
+        scanf("%d",&rep);
+        printf("Faux, recommencez\n");
     }
+    printf("Bravo !\n");
 
-    printf("nb1: %d, nb2: %d, nb3: %d\n",ent1,ent2,ent3);
+
     return 0;
 }
