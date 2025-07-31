@@ -45,16 +45,43 @@ Afficher si ce nombre est pair ou impair (le reste de la division entière de ce
 Pour obtenir le reste d'une division, on utilise l'opérateur "Modulo". En langage C l'opérateur Modulo est représenté par le symbole % 
 */
 
+// #include <stdio.h>
+
+// int main(){
+//     int nb1,nb2,nb3;
+//     scanf("%i%i", &nb1,&nb2);
+//     nb3 = nb1%nb2;
+//     if (nb3!=0){
+//         printf("Le nombre %i est impair\n", nb3);
+//     }else{
+//         printf("Le nombre %i est pair\n", nb3);
+//     }
+
+// }
+
+/*Exercice 4
+Demander à l'utilisateur 2 nombres entiers et les stocker dans des variables.
+
+Échanger les 2 valeurs des 2 variables et les afficher.
+*/
+
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(){
     int nb1,nb2,nb3;
-    scanf("%i%i", &nb1,&nb2);
-    nb3 = nb1%nb2;
-    if (nb3!=0){
-        printf("Le nombre %i est impair\n", nb3);
-    }else{
-        printf("Le nombre %i est pair\n", nb3);
-    }
 
+    printf("Entrer un nombre entier (nb1):\n");
+    scanf("%d", &nb1);
+
+
+    printf("Entrer un nombre entier (nb2):\n");
+    scanf("%d", &nb2);
+
+    nb3 = nb1;
+    nb1 = nb2;
+    nb2 = nb3;
+
+    printf("nb1: %d, nb2: %d\n", nb1,nb2);
+    return 0;
 }
