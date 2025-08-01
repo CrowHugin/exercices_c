@@ -174,7 +174,7 @@ int main(){
 
 /*Exercice 8
 Demander à l’utilisateur un nombre entier positif. Afficher tous les nombres pairs entre 0 et le nombre saisi."*/
-
+/*
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -194,9 +194,31 @@ int main(){
 	}
 	return 0;
 }
+*/
+
+/*Exercice 9
+Demander à l’utilisateur de saisir des notes (entre 0 et 20) et lui expliquer qu’une valeur hors de cet intervalle arrêtera la saisie.
+
+Compter les notes saisies. Une fois la saisie terminée, afficher le nombre de notes saisies.*/
 
 
+#include <stdio.h>
+#include <stdlib.h>
 
+int main(){ 
+	int nb,nb_grade;
+	
+	nb_grade = 0;
+	
 
+	printf("Veuillez choisir des notes comprises entre 1 et 20\n");
+        scanf("%d",&nb);
 
-
+	while((0 <=  nb) && (nb <=  20)){
+		printf("Veuillez choisir des notes comprises entre 1 et 20\n");
+        	scanf("%d",&nb);        
+            	nb_grade++;				
+	}
+	printf("nombre de notes: %d\n",nb_grade);
+	return 0;
+}
