@@ -201,7 +201,7 @@ Demander à l’utilisateur de saisir des notes (entre 0 et 20) et lui expliquer
 
 Compter les notes saisies. Une fois la saisie terminée, afficher le nombre de notes saisies.*/
 
-
+/*
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -221,4 +221,49 @@ int main(){
 	}
 	printf("nombre de notes: %d\n",nb_grade);
 	return 0;
+}*/
+
+
+/*Exercice 10
+Même chose que l'exercice 9, mais en calculant – au fur et à mesure – la somme des notes.
+
+A la fin, calculer et afficher la moyenne, ou un message d’erreur si aucune note n’a été saisie.*/
+
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main(){
+	int nb_grade;
+        float nb, sum, moy; 
+        nb_grade = 0;
+	sum = 0;
+        printf("Veuillez choisir des notes comprises entre 1 et 20\n");
+        scanf("%f",&nb);
+	sum += nb;
+
+      	while((0 <=  nb) && (nb <=  20)){
+       		printf("Veuillez choisir des notes comprises entre 1 et 20\n");
+               	scanf("%f",&nb);        
+               	nb_grade++;
+		sum += nb;
+                            
+       	}
+	if (nb >= 0){
+       		printf("nombre de notes: %d\n",nb_grade);
+		sum -= nb;
+		printf("somme: %f\n",sum);
+		moy = sum / nb_grade;
+		printf("Moyenne: %f\n", moy);
+	}else{
+
+		printf("ERROR: aucune note n'a été saisie\n");
+	}
+        return 0;
+
+
 }
+
