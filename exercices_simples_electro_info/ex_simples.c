@@ -272,6 +272,8 @@ Prix TTC. Demander le prix unitaire HT et le nombre d’exemplaires.
 
 Calculer et afficher le prix total HT, la TVA et le prix total (TTC) à payer.*/
 
+
+/*
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -293,7 +295,50 @@ int main(){
 	fprice = (prix*exemp)*tva;
 	printf("prix final: %f\n",fprice);
 	return 0;
+}*/
+
+
+
+/*Exercice 12
+Même chose que l'exercice 10, mais en mémorisant la note la plus basse et la note la plus haute.
+
+A la fin, afficher ces deux notes ainsi que la moyenne tronquée (moyenne ne tenant pas compte des valeurs extrêmes :
+dans notre cas la note la plus basse et la note la plus haute), ou un message d’erreur si aucune note n’a été saisie.*/
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main(){
+        int nb_grade = 0;
+        float nb = 0, sum = 0, moy, min =20, max = 0; 
+        printf("Veuillez choisir des notes comprises entre 1 et 20\n");
+
+        while((0 <=  nb) && (nb <=  20)){
+                scanf("%f",&nb);        
+                nb_grade++;
+                sum += nb;
+                if((nb > max) && (nb <= 20)){
+			max = nb;
+		}
+		if((nb < min) && (nb >= 0)){
+			min = nb;		
+		}
+             
+        }
+
+        if (nb >= 0) {
+                printf("nombre de notes: %d\n",nb_grade);
+                sum -= nb;
+                printf("somme: %f\n",sum);
+                moy = sum / nb_grade;
+                printf("Moyenne: %f, Min: %f, Max: %f\n", moy,min,max);		
+	}else{
+
+                printf("ERROR: aucune note n'a été saisie\n");
+        }
+        return 0;
 }
 
-
- 
