@@ -231,7 +231,7 @@ A la fin, calculer et afficher la moyenne, ou un message d’erreur si aucune no
 
 
 
-
+/*
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -265,5 +265,35 @@ int main(){
         return 0;
 
 
+}*/
+
+/*Exercice 10
+Prix TTC. Demander le prix unitaire HT et le nombre d’exemplaires.
+
+Calculer et afficher le prix total HT, la TVA et le prix total (TTC) à payer.*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+	
+	int exemp;
+	float prix,tva,fprice;
+
+	tva = 1.2;
+	printf("Quel est le prix unittaire?\n");
+	scanf("%f",&prix);
+
+	printf("Combien d'exemplaire?\n");
+	scanf("%d",&exemp);
+	
+	printf("unit price: %f, nb exemplaire: %d\n",prix,exemp);
+	
+
+	fprice = (prix*exemp)*tva;
+	printf("prix final: %f\n",fprice);
+	return 0;
 }
 
+
+ 
